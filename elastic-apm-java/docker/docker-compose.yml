@@ -1,26 +1,43 @@
 version: '3'
 
 services:
-  user-microservice:
-    image: apm-java/app:1.0.0
-    build:
-      context: ../
-      dockerfile: docker/java/Dockerfile
-      args:
-        - "JAR_PATH=target/apm-0.0.1-SNAPSHOT.jar"
-    environment:
-      - "JAR_NAME=apm-0.0.1-SNAPSHOT.jar"
-      - "JVM_OPTIONS="
-      - "ELASTIC_APM_SERVICE_NAME=user-service"
-      - "ELASTIC_APM_APPLICATION_PACKAGES=com.cosmin.tutorials.apm"
-      - "ELASTIC_APM_SERVER_URLS=http://apm:8200"
-    ports:
-      - 8080:8080
-    links:
-      - apm
-      - mysql
+#  user-microservice:
+#    image: apm-java/app:1.0.0
+#    build:
+#      context: ../
+#      dockerfile: docker/java/Dockerfile
+#      args:
+#        - "JAR_PATH=target/apm-0.0.1-SNAPSHOT.jar"
+#    environment:
+#      - "JAR_NAME=apm-0.0.1-SNAPSHOT.jar"
+#      - "JVM_OPTIONS="
+#      - "ELASTIC_APM_SERVICE_NAME=user-service"
+#      - "ELASTIC_APM_APPLICATION_PACKAGES=com.cosmin.tutorials.apm"
+#      - "ELASTIC_APM_SERVER_URLS=http://apm:8200"
+#    ports:
+#      - 8080:8080
+#    links:
+#      - apm
+#      - mysql
+
+#  user-webfluxservice:
+#    image: adoptopenjdk:14-jre-hotspot
+#    build:
+#      context: ../
+#      dockerfile: docker/java-webflux/Dockerfile
+#    environment:
+#      - "JAR_NAME=apm-webflux-0.0.1-SNAPSHOT.jar"
+#      - "JVM_OPTIONS="
+#      - "ELASTIC_APM_SERVICE_NAME=user-webflux-service"
+#      - "ELASTIC_APM_APPLICATION_PACKAGES=io.github.cosminseceleanu.tutorials.sampleapp"
+#      - "ELASTIC_APM_SERVER_URLS=http://apm:8200"
+#    ports:
+#      - 8088:8080
+#    links:
+#      - apm
+
   kibana:
-    image: kibana:6.5.2
+    image: kibana:7.7.1
     environment:
       - "LOGGING_QUIET=true"
     links:
@@ -36,7 +53,7 @@ services:
     environment:
       - cluster.name=apm-java
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ulimits:
       memlock:
         soft: -1

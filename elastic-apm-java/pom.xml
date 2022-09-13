@@ -5,20 +5,20 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.1.RELEASE</version>
+		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 
 	<groupId>com.cosmin.tutorials.apm</groupId>
-	<artifactId>apm</artifactId>
+	<artifactId>elastic-apm-mvc-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apm</name>
 	<packaging>jar</packaging>
 	<description>Demo project to monitor Java Application using Elastic APM</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
@@ -40,9 +40,13 @@
 		<dependency>
 			<groupId>co.elastic.apm</groupId>
 			<artifactId>apm-agent-api</artifactId>
-			<version>1.2.0</version>
+			<version>1.28.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>co.elastic.apm</groupId>
+			<artifactId>apm-agent-attach</artifactId>
+			<version>1.28.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

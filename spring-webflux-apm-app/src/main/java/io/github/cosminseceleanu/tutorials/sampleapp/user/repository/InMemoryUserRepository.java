@@ -1,5 +1,6 @@
 package io.github.cosminseceleanu.tutorials.sampleapp.user.repository;
 
+import co.elastic.apm.api.CaptureTransaction;
 import io.github.cosminseceleanu.tutorials.sampleapp.user.model.User;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,11 +14,13 @@ public class InMemoryUserRepository implements UserRepository {
     private static final Map<String, User> USERS = new ConcurrentHashMap<>();
 
     @Override
+    @CaptureTransaction(type = "InMemoryUserRepository", value = "findById")
     public Mono<User> findById(String id) {
         return Mono.justOrEmpty(USERS.get(id));
     }
 
     @Override
+    @CaptureTransaction(type = "InMemoryUserRepository", value = "save")
     public Mono<User> save(User user) {
         if (user.getId() == null) {
             return Mono.error(new IllegalArgumentException("User id can not be null"));
@@ -29,6 +32,7 @@ public class InMemoryUserRepository implements UserRepository {
     }
 
     @Override
+    @CaptureTransaction(type = "InMemoryUserRepository", value = "findAll")
     public Flux<User> findAll() {
         return Flux.fromIterable(USERS.values());
     }

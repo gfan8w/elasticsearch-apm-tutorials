@@ -3,6 +3,7 @@ apm-server:
   concurrent_requests: 5
   rum:
     enabled: true
+#  secret_token: "xxVpmQB2HMzCL9PgBHVrnxjNXXw5J7bd79DFm6sjBJR5HPXDhcF8MSb3vv4bpg44"
 
 queue.mem.events: 4096
 max_procs: 4
@@ -11,7 +12,7 @@ output.elasticsearch:
   hosts: ["http://elasticsearch:9200"]
 
 setup.kibana.host: "kibana:5601"
-setup.dashboards.enabled: true
+
 
 logging.level: info
 logging.to_files: false

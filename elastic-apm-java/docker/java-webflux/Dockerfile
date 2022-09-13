@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-11-openj9 as build
+FROM maven:3.8.4-jdk-11 as build
 
 ENV APP_NAME app
 ENV APP_HOME /home/app
@@ -8,15 +8,17 @@ ENV LC_ALL en_US.UTF-8
 
 WORKDIR $APP_HOME
 
-COPY ../../pom.xml .
+COPY ../../../spring-webflux-apm-app/pom.xml .
+COPY ../../../spring-webflux-apm-app/src $APP_HOME/src
 
 RUN mvn dependency:go-offline
 
-COPY ../../src $APP_HOME/src
-
 RUN mvn package -Dmaven.test.skip=true
 
-FROM openjdk:11-slim as prod
+
+#Run application Stage
+#We only need java
+FROM adoptopenjdk:14-jre-hotspot AS base
 
 ENV APP_NAME app
 ENV APP_HOME /home/app
