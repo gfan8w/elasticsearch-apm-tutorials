@@ -18,11 +18,11 @@ import java.util.Random;
 @Slf4j
 public class PrintUsersTask {
 
-    private UserService userRepository;
+    private UserService userService;
 
     @Autowired
     public PrintUsersTask(UserService userRepository) {
-        this.userRepository = userRepository;
+        this.userService = userRepository;
     }
 
     @Scheduled(fixedDelayString = "5000")
@@ -33,10 +33,10 @@ public class PrintUsersTask {
 
     @CaptureTransaction(type = "Task", value = "PrintWebFluxUsers")
     private void doExecute() {
-        userRepository.all()
-                .flatMap(u-> this.check(u.getName()))
-                .subscribe(item->log.info("user name:{}",item));
-
+        Flux.range(1,3).flatMap(x->{
+            return userService.all()
+                    .flatMap(u-> this.check(u.getName()));
+        }).subscribe(item->log.info("user name:{}",item));
 
         sleep();
     }
@@ -59,9 +59,8 @@ public class PrintUsersTask {
     }
 
     @CaptureSpan("convertToString")
-    private Mono<List<String>> check(String name) {
-        return Flux.range(1,2).delayElements(Duration.ofSeconds(1))
-                .flatMap(x->Mono.just("checked: "+x))
-                .collectList();
+    private Mono<String> check(String name) {
+        return Mono.just(name).delayElement(Duration.ofSeconds(1))
+                .flatMap(x->Mono.just("checked: "+x));
     }
 }

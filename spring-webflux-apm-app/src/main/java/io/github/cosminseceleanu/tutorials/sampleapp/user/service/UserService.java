@@ -32,12 +32,12 @@ public class UserService {
     @CaptureTransaction(type = "UserService", value = "create")
     public Mono<User> create(User user) {
         return userRepository.save(user.toBuilder().id(UUID.randomUUID().toString()).build())
-                .delayElement(Duration.ofSeconds(random(1,10)));
+                .delayElement(Duration.ofSeconds(random(1,2)));
     }
 
     @CaptureTransaction(type = "UserService", value = "all")
     public Flux<User> all(){
-        return userRepository.findAll().delayElements(Duration.ofSeconds(random(1,10)));
+        return userRepository.findAll().delayElements(Duration.ofSeconds(random(1,2)));
     }
 
     @CaptureSpan("random")
