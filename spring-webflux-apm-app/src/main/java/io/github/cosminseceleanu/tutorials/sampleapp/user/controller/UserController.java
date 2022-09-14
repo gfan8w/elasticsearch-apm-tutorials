@@ -39,6 +39,6 @@ public class UserController {
     @ResponseStatus(code = HttpStatus.CREATED)
     @CaptureTransaction(type = "UserController", value = "create")
     public Mono<UserRepresentation> create(@RequestBody @Valid UserRepresentation user) {
-        return userService.create(user.toModel()).map(UserRepresentation::from).doFinally(x->log.info("saved the user:{}",x));
+        return userService.create(user.toModel()).map(UserRepresentation::from).doFinally(x->log.info("log by user code: saved the user:{}",x));
     }
 }

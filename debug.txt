@@ -1,0 +1,1374 @@
+/Volumes/datadisk/work/java/jdk-16.0.2+7/Contents/Home/bin/java -Dserver.port=8084 -Dlogging.level.root=DEBUG -XX:TieredStopAtLevel=1 -noverify -Dspring.output.ansi.enabled=always -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=61691:/Applications/IntelliJ IDEA.app/Contents/bin -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dfile.encoding=UTF-8 -classpath /Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials/spring-webflux-apm-app/target/classes:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot-starter-webflux/2.5.3/spring-boot-starter-webflux-2.5.3.jar:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot-starter/2.5.3/spring-boot-starter-2.5.3.jar:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot/2.5.3/spring-boot-2.5.3.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-context/5.3.9/spring-context-5.3.9.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-aop/5.3.9/spring-aop-5.3.9.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-expression/5.3.9/spring-expression-5.3.9.jar:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot-autoconfigure/2.5.3/spring-boot-autoconfigure-2.5.3.jar:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot-starter-logging/2.5.3/spring-boot-starter-logging-2.5.3.jar:/Volumes/datadisk/work/maven/repository/ch/qos/logback/logback-classic/1.2.4/logback-classic-1.2.4.jar:/Volumes/datadisk/work/maven/repository/ch/qos/logback/logback-core/1.2.4/logback-core-1.2.4.jar:/Volumes/datadisk/work/maven/repository/org/apache/logging/log4j/log4j-to-slf4j/2.14.1/log4j-to-slf4j-2.14.1.jar:/Volumes/datadisk/work/maven/repository/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar:/Volumes/datadisk/work/maven/repository/org/slf4j/jul-to-slf4j/1.7.32/jul-to-slf4j-1.7.32.jar:/Volumes/datadisk/work/maven/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Volumes/datadisk/work/maven/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot-starter-json/2.5.3/spring-boot-starter-json-2.5.3.jar:/Volumes/datadisk/work/maven/repository/com/fasterxml/jackson/core/jackson-databind/2.12.4/jackson-databind-2.12.4.jar:/Volumes/datadisk/work/maven/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.4/jackson-annotations-2.12.4.jar:/Volumes/datadisk/work/maven/repository/com/fasterxml/jackson/core/jackson-core/2.12.4/jackson-core-2.12.4.jar:/Volumes/datadisk/work/maven/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.12.4/jackson-datatype-jdk8-2.12.4.jar:/Volumes/datadisk/work/maven/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.12.4/jackson-datatype-jsr310-2.12.4.jar:/Volumes/datadisk/work/maven/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.12.4/jackson-module-parameter-names-2.12.4.jar:/Volumes/datadisk/work/maven/repository/org/springframework/boot/spring-boot-starter-reactor-netty/2.5.3/spring-boot-starter-reactor-netty-2.5.3.jar:/Volumes/datadisk/work/maven/repository/io/projectreactor/netty/reactor-netty-http/1.0.9/reactor-netty-http-1.0.9.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-codec-http/4.1.66.Final/netty-codec-http-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-common/4.1.66.Final/netty-common-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-buffer/4.1.66.Final/netty-buffer-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-transport/4.1.66.Final/netty-transport-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-codec/4.1.66.Final/netty-codec-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-handler/4.1.66.Final/netty-handler-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-codec-http2/4.1.66.Final/netty-codec-http2-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-resolver-dns/4.1.66.Final/netty-resolver-dns-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-resolver/4.1.66.Final/netty-resolver-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-codec-dns/4.1.66.Final/netty-codec-dns-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-resolver-dns-native-macos/4.1.66.Final/netty-resolver-dns-native-macos-4.1.66.Final-osx-x86_64.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-transport-native-unix-common/4.1.66.Final/netty-transport-native-unix-common-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-transport-native-epoll/4.1.66.Final/netty-transport-native-epoll-4.1.66.Final-linux-x86_64.jar:/Volumes/datadisk/work/maven/repository/io/projectreactor/netty/reactor-netty-core/1.0.9/reactor-netty-core-1.0.9.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-handler-proxy/4.1.66.Final/netty-handler-proxy-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/io/netty/netty-codec-socks/4.1.66.Final/netty-codec-socks-4.1.66.Final.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-web/5.3.9/spring-web-5.3.9.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-beans/5.3.9/spring-beans-5.3.9.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-webflux/5.3.9/spring-webflux-5.3.9.jar:/Volumes/datadisk/work/maven/repository/co/elastic/apm/apm-agent-api/1.33.0/apm-agent-api-1.33.0.jar:/Volumes/datadisk/work/maven/repository/co/elastic/apm/apm-agent-attach/1.33.0/apm-agent-attach-1.33.0.jar:/Volumes/datadisk/work/maven/repository/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar:/Volumes/datadisk/work/maven/repository/net/java/dev/jna/jna-platform/5.3.1/jna-platform-5.3.1.jar:/Volumes/datadisk/work/maven/repository/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar:/Volumes/datadisk/work/maven/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-core/5.3.9/spring-core-5.3.9.jar:/Volumes/datadisk/work/maven/repository/org/springframework/spring-jcl/5.3.9/spring-jcl-5.3.9.jar:/Volumes/datadisk/work/maven/repository/io/projectreactor/reactor-core/3.4.8/reactor-core-3.4.8.jar:/Volumes/datadisk/work/maven/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Volumes/datadisk/work/maven/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar io.github.cosminseceleanu.tutorials.sampleapp.Application
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+[elastic-apm-agent] WARN WARNING: -Xverify:none and -noverify are not supported by the Elastic APM Java Agent. In an upcoming version, the agent will not start when these flags are set, unless the system property elastic.apm.disable_bootstrap_checks is set to true.
+2022-09-14 14:59:46,009 [Attach Listener] INFO  co.elastic.apm.agent.util.JmxUtils - Found JVM-specific OperatingSystemMXBean interface: com.sun.management.OperatingSystemMXBean
+2022-09-14 14:59:46,024 [Attach Listener] INFO  co.elastic.apm.agent.configuration.StartupInfo - Starting Elastic APM 1.33.0 as Application on Java 16.0.2 Runtime version: 16.0.2+7 VM version: 16.0.2+7 (Eclipse Foundation) Mac OS X 11.5
+2022-09-14 14:59:46,024 [Attach Listener] INFO  co.elastic.apm.agent.configuration.StartupInfo - enable_experimental_instrumentations: 'true' (source: Attachment configuration)
+2022-09-14 14:59:46,024 [Attach Listener] WARN  co.elastic.apm.agent.configuration.StartupInfo - To enable all features and decrease startup time, please configure application_packages
+2022-09-14 14:59:47,038 [Attach Listener] INFO  co.elastic.apm.agent.impl.ElasticApmTracer - Tracer switched to RUNNING state
+2022-09-14 14:59:47,051 [elastic-apm-server-healthcheck] INFO  co.elastic.apm.agent.report.ApmServerHealthChecker - Elastic APM server is available: {  "build_date": "2020-05-28T14:42:11Z",  "build_sha": "0102a80acd2c83e4ab9cce93dc630b877e3063e7",  "version": "7.7.1"}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.3)
+
+2022-09-14 14:59:47.697  INFO 3929 --- [           main] i.g.c.tutorials.sampleapp.Application    : Starting Application using Java 16.0.2 on mmacs-MacBook-Pro.local with PID 3929 (/Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials/spring-webflux-apm-app/target/classes started by mmac in /Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials)
+2022-09-14 14:59:47.702 DEBUG 3929 --- [           main] i.g.c.tutorials.sampleapp.Application    : Running with Spring Boot v2.5.3, Spring v5.3.9
+2022-09-14 14:59:47.703  INFO 3929 --- [           main] i.g.c.tutorials.sampleapp.Application    : No active profile set, falling back to default profiles: default
+2022-09-14 14:59:47.703 DEBUG 3929 --- [           main] o.s.boot.SpringApplication               : Loading source class io.github.cosminseceleanu.tutorials.sampleapp.Application
+2022-09-14 14:59:47.737 DEBUG 3929 --- [           main] onfigReactiveWebServerApplicationContext : Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@732f29af
+2022-09-14 14:59:47.749 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2022-09-14 14:59:47.759 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2022-09-14 14:59:47.808 DEBUG 3929 --- [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials/spring-webflux-apm-app/target/classes/io/github/cosminseceleanu/tutorials/sampleapp/user/controller/UserController.class]
+2022-09-14 14:59:47.809 DEBUG 3929 --- [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials/spring-webflux-apm-app/target/classes/io/github/cosminseceleanu/tutorials/sampleapp/user/repository/InMemoryUserRepository.class]
+2022-09-14 14:59:47.810 DEBUG 3929 --- [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials/spring-webflux-apm-app/target/classes/io/github/cosminseceleanu/tutorials/sampleapp/user/service/UserService.class]
+2022-09-14 14:59:47.812 DEBUG 3929 --- [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : Identified candidate component class: file [/Volumes/datadisk/tech/practice/java/es/elastic-apm/elasticsearch-apm-tutorials/spring-webflux-apm-app/target/classes/io/github/cosminseceleanu/tutorials/sampleapp/user/tasks/PrintUsersTask.class]
+2022-09-14 14:59:47,936 [main] INFO  co.elastic.apm.agent.bci.bytebuddy.ErrorLoggingListener - org.springframework.web.context.support.GenericWebApplicationContext refers to a missing class.
+2022-09-14 14:59:47,938 [main] INFO  co.elastic.apm.agent.bci.bytebuddy.ErrorLoggingListener - org.springframework.web.context.ConfigurableWebApplicationContext refers to a missing class.
+2022-09-14 14:59:47,940 [main] INFO  co.elastic.apm.agent.bci.bytebuddy.ErrorLoggingListener - org.springframework.web.context.WebApplicationContext refers to a missing class.
+2022-09-14 14:59:48.130 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 82
+2022-09-14 14:59:48.130 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.131 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.132 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.132 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.132 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.132 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.133 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.133 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.133 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 84
+2022-09-14 14:59:48.134 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.134 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.134 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:48.135 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  3, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2022-09-14 14:59:48.138 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.server.call                      : RMI TCP Connection(1)-192.168.0.100: [192.168.0.100] exception:
+
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1083) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:637) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:678) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1443) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1399) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:637) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-09-14 14:59:48.139 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.139 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@1b83a5dc: connectionId=rmi://192.168.0.100  3] closing.
+2022-09-14 14:59:48.140 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@1b83a5dc: connectionId=rmi://192.168.0.100  3] closed.
+2022-09-14 14:59:48.296 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+2022-09-14 14:59:48.300 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor'
+2022-09-14 14:59:48.306 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2022-09-14 14:59:48.307 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'forceAutoProxyCreatorToUseClassProxying'
+2022-09-14 14:59:48.307 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2022-09-14 14:59:48.312 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2022-09-14 14:59:48.312 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2022-09-14 14:59:48.315 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor'
+2022-09-14 14:59:48.316 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinder'
+2022-09-14 14:59:48.316 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.internalConfigurationPropertiesBinderFactory'
+2022-09-14 14:59:48.318 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2022-09-14 14:59:48.336 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webServerFactoryCustomizerBeanPostProcessor'
+2022-09-14 14:59:48.338 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'nettyReactiveWebServerFactory'
+2022-09-14 14:59:48.339 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryConfiguration$EmbeddedNetty'
+2022-09-14 14:59:48.342 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'reactorServerResourceFactory'
+2022-09-14 14:59:48.346 DEBUG 3929 --- [           main] reactor.util.Loggers                     : Using Slf4j logging framework
+2022-09-14 14:59:48.360 DEBUG 3929 --- [           main] i.n.u.i.logging.InternalLoggerFactory    : Using SLF4J as the default logging framework
+2022-09-14 14:59:48.364 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : -Dio.netty.noUnsafe: false
+2022-09-14 14:59:48.364 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : Java version: 16
+2022-09-14 14:59:48.365 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : sun.misc.Unsafe.theUnsafe: available
+2022-09-14 14:59:48.366 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : sun.misc.Unsafe.copyMemory: available
+2022-09-14 14:59:48.367 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : java.nio.Buffer.address: available
+2022-09-14 14:59:48.368 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2022-09-14 14:59:48.368 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : java.nio.Bits.unaligned: available, true
+2022-09-14 14:59:48.369 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @38c46d7f
+2022-09-14 14:59:48.371 DEBUG 3929 --- [           main] i.n.util.internal.PlatformDependent0     : java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-09-14 14:59:48.371 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : sun.misc.Unsafe: available
+2022-09-14 14:59:48.372 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : maxDirectMemory: 8589934592 bytes (maybe)
+2022-09-14 14:59:48.372 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : -Dio.netty.tmpdir: /var/folders/cm/xl4yx08j4zq_nj6gq0bhqwqw0000gn/T (java.io.tmpdir)
+2022-09-14 14:59:48.372 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-09-14 14:59:48.373 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : Platform: MacOS
+2022-09-14 14:59:48.374 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : -Dio.netty.maxDirectMemory: -1 bytes
+2022-09-14 14:59:48.375 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-09-14 14:59:48.376 DEBUG 3929 --- [           main] io.netty.util.internal.CleanerJava9      : java.nio.ByteBuffer.cleaner(): available
+2022-09-14 14:59:48.376 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : -Dio.netty.noPreferDirect: false
+2022-09-14 14:59:48.377 DEBUG 3929 --- [           main] reactor.netty.tcp.TcpResources           : [http] resources will use the default LoopResources: DefaultLoopResources {prefix=reactor-http, daemon=true, selectCount=12, workerCount=12}
+2022-09-14 14:59:48.377 DEBUG 3929 --- [           main] reactor.netty.tcp.TcpResources           : [http] resources will use the default ConnectionProvider: reactor.netty.resources.DefaultPooledConnectionProvider@64a4dd8d
+2022-09-14 14:59:48.378 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'nettyReactiveWebServerFactory' via factory method to bean named 'reactorServerResourceFactory'
+2022-09-14 14:59:48.390 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'reactiveWebServerFactoryCustomizer'
+2022-09-14 14:59:48.391 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryAutoConfiguration'
+2022-09-14 14:59:48.394 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2022-09-14 14:59:48.406 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.BoundConfigurationProperties'
+2022-09-14 14:59:48.423 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'reactiveWebServerFactoryCustomizer' via factory method to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2022-09-14 14:59:48.424 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'nettyWebServerFactoryCustomizer'
+2022-09-14 14:59:48.424 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$NettyWebServerFactoryCustomizerConfiguration'
+2022-09-14 14:59:48.425 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'nettyWebServerFactoryCustomizer' via factory method to bean named 'environment'
+2022-09-14 14:59:48.426 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'nettyWebServerFactoryCustomizer' via factory method to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2022-09-14 14:59:48.484 DEBUG 3929 --- [           main] io.netty.util.ResourceLeakDetector       : -Dio.netty.leakDetection.level: simple
+2022-09-14 14:59:48.484 DEBUG 3929 --- [           main] io.netty.util.ResourceLeakDetector       : -Dio.netty.leakDetection.targetRecords: 4
+2022-09-14 14:59:48.530 DEBUG 3929 --- [           main] i.n.u.internal.InternalThreadLocalMap    : -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-09-14 14:59:48.530 DEBUG 3929 --- [           main] i.n.u.internal.InternalThreadLocalMap    : -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-09-14 14:59:48.534 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'application'
+2022-09-14 14:59:48.535 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'userController'
+2022-09-14 14:59:48.540 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'userService'
+2022-09-14 14:59:48.540 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'inMemoryUserRepository'
+2022-09-14 14:59:48.541 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'userService' via constructor to bean named 'inMemoryUserRepository'
+2022-09-14 14:59:48.542 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'userController' via constructor to bean named 'userService'
+2022-09-14 14:59:48.543 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'printUsersTask'
+2022-09-14 14:59:48.545 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'printUsersTask' via constructor to bean named 'userService'
+2022-09-14 14:59:48.546 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'
+2022-09-14 14:59:48.546 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+2022-09-14 14:59:48.546 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter'
+2022-09-14 14:59:48.547 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration'
+2022-09-14 14:59:48.547 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'standardJacksonObjectMapperBuilderCustomizer'
+2022-09-14 14:59:48.548 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2022-09-14 14:59:48.550 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@732f29af'
+2022-09-14 14:59:48.550 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'standardJacksonObjectMapperBuilderCustomizer' via factory method to bean named 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties'
+2022-09-14 14:59:48.551 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration'
+2022-09-14 14:59:48.551 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration'
+2022-09-14 14:59:48.551 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'parameterNamesModule'
+2022-09-14 14:59:48.554 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration'
+2022-09-14 14:59:48.555 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonObjectMapper'
+2022-09-14 14:59:48.557 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@732f29af'
+2022-09-14 14:59:48.557 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapperBuilder' via factory method to bean named 'standardJacksonObjectMapperBuilderCustomizer'
+2022-09-14 14:59:48.559 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jsonComponentModule'
+2022-09-14 14:59:48.559 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration'
+2022-09-14 14:59:48.571 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonObjectMapper' via factory method to bean named 'jacksonObjectMapperBuilder'
+2022-09-14 14:59:48.591 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$DefaultCodecsConfiguration'
+2022-09-14 14:59:48.592 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'defaultCodecCustomizer'
+2022-09-14 14:59:48.592 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.codec-org.springframework.boot.autoconfigure.codec.CodecProperties'
+2022-09-14 14:59:48.594 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'defaultCodecCustomizer' via factory method to bean named 'spring.codec-org.springframework.boot.autoconfigure.codec.CodecProperties'
+2022-09-14 14:59:48.595 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration'
+2022-09-14 14:59:48.595 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jacksonCodecCustomizer'
+2022-09-14 14:59:48.596 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jacksonCodecCustomizer' via factory method to bean named 'jacksonObjectMapper'
+2022-09-14 14:59:48.596 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration'
+2022-09-14 14:59:48.597 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration'
+2022-09-14 14:59:48.597 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration' via constructor to bean named 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+2022-09-14 14:59:48.597 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorWebExceptionHandler'
+2022-09-14 14:59:48.598 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'errorAttributes'
+2022-09-14 14:59:48.600 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties'
+2022-09-14 14:59:48.607 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2022-09-14 14:59:48.610 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'serverCodecConfigurer'
+2022-09-14 14:59:48.611 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration'
+2022-09-14 14:59:48.611 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2022-09-14 14:59:48.614 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration' via constructor to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2022-09-14 14:59:48.614 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$EnableWebFluxConfiguration' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2022-09-14 14:59:48.623 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig'
+2022-09-14 14:59:48.626 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties'
+2022-09-14 14:59:48.626 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2022-09-14 14:59:48.626 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2022-09-14 14:59:48.626 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WebFluxConfig' via constructor to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@47dbb1e2'
+2022-09-14 14:59:48.641 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 82
+2022-09-14 14:59:48.641 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.643 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.644 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.645 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.645 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.645 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.646 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.646 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:48.647 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 84
+2022-09-14 14:59:48.648 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.648 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.649 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:48.649 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  4, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2022-09-14 14:59:48.650 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.server.call                      : RMI TCP Connection(1)-192.168.0.100: [192.168.0.100] exception:
+
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1083) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:637) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:678) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1443) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1399) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:637) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:691) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-09-14 14:59:48.652 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:48.653 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@2487fbe7: connectionId=rmi://192.168.0.100  4] closing.
+2022-09-14 14:59:48.653 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@2487fbe7: connectionId=rmi://192.168.0.100  4] closed.
+2022-09-14 14:59:48.726 DEBUG 3929 --- [           main] reactor.core.publisher.Hooks             : Hooking onEachOperator: elastic-apm
+2022-09-14 14:59:48.746 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'errorAttributes'
+2022-09-14 14:59:48.746 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties'
+2022-09-14 14:59:48.746 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2022-09-14 14:59:48.746 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'serverCodecConfigurer'
+2022-09-14 14:59:48.746 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'errorWebExceptionHandler' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@732f29af'
+2022-09-14 14:59:48.755 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxConversionService'
+2022-09-14 14:59:48.758 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxValidator'
+2022-09-14 14:59:48.764 DEBUG 3929 --- [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider
+
+javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-2.0.2.jar:na]
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:259) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean.afterPropertiesSet(OptionalValidatorFactoryBean.java:40) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.afterPropertiesSet(ValidatorAdapter.java:83) ~[spring-boot-autoconfigure-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at io.github.cosminseceleanu.tutorials.sampleapp.Application.main(Application.java:11) ~[classes/:na]
+
+2022-09-14 14:59:48.764 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'localeContextResolver'
+2022-09-14 14:59:48.766 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webSessionManager'
+2022-09-14 14:59:48.773 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webHandler'
+2022-09-14 14:59:48.774 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerMapping'
+2022-09-14 14:59:48.780 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxContentTypeResolver'
+2022-09-14 14:59:48.781 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerMapping' via factory method to bean named 'webFluxContentTypeResolver'
+2022-09-14 14:59:48.825 DEBUG 3929 --- [           main] _.s.w.reactive.HandlerMapping.Mappings   :
+	i.g.c.t.s.u.c.UserController:
+	{GET /users/{id}}: get(String)
+	{POST /users}: create(UserRepresentation)
+	{GET /users}: all()
+2022-09-14 14:59:48.832 DEBUG 3929 --- [           main] s.w.r.r.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-09-14 14:59:48.833 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'routerFunctionMapping'
+2022-09-14 14:59:48.833 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'routerFunctionMapping' via factory method to bean named 'serverCodecConfigurer'
+2022-09-14 14:59:48.835 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceHandlerMapping'
+2022-09-14 14:59:48.836 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'resourceUrlProvider'
+2022-09-14 14:59:48.840 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'resourceHandlerMapping' via factory method to bean named 'resourceUrlProvider'
+2022-09-14 14:59:48.847 DEBUG 3929 --- [           main] _.s.w.reactive.HandlerMapping.Mappings   : 'resourceHandlerMapping' {/webjars/**=ResourceWebHandler ["classpath:/META-INF/resources/webjars/"], /**=ResourceWebHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/"]}
+2022-09-14 14:59:48.848 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'welcomePageRouterFunctionMapping'
+2022-09-14 14:59:48.848 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration$WelcomePageConfiguration'
+2022-09-14 14:59:48.850 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@732f29af'
+2022-09-14 14:59:48.850 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'spring.webflux-org.springframework.boot.autoconfigure.web.reactive.WebFluxProperties'
+2022-09-14 14:59:48.850 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties'
+2022-09-14 14:59:48.850 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'welcomePageRouterFunctionMapping' via factory method to bean named 'spring.web-org.springframework.boot.autoconfigure.web.WebProperties'
+2022-09-14 14:59:48.853 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'requestMappingHandlerAdapter'
+2022-09-14 14:59:48.854 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxAdapterRegistry'
+2022-09-14 14:59:48.868 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxAdapterRegistry'
+2022-09-14 14:59:48.868 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'serverCodecConfigurer'
+2022-09-14 14:59:48.869 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxConversionService'
+2022-09-14 14:59:48.869 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'requestMappingHandlerAdapter' via factory method to bean named 'webFluxValidator'
+2022-09-14 14:59:48.890 DEBUG 3929 --- [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2022-09-14 14:59:48.890 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'handlerFunctionAdapter'
+2022-09-14 14:59:48.890 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'simpleHandlerAdapter'
+2022-09-14 14:59:48.891 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'webFluxWebSocketHandlerAdapter'
+2022-09-14 14:59:48.895 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'responseEntityResultHandler'
+2022-09-14 14:59:48.896 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'webFluxAdapterRegistry'
+2022-09-14 14:59:48.896 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'serverCodecConfigurer'
+2022-09-14 14:59:48.896 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseEntityResultHandler' via factory method to bean named 'webFluxContentTypeResolver'
+2022-09-14 14:59:48.897 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'responseBodyResultHandler'
+2022-09-14 14:59:48.897 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'webFluxAdapterRegistry'
+2022-09-14 14:59:48.897 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'serverCodecConfigurer'
+2022-09-14 14:59:48.897 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'responseBodyResultHandler' via factory method to bean named 'webFluxContentTypeResolver'
+2022-09-14 14:59:48.898 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'viewResolutionResultHandler'
+2022-09-14 14:59:48.898 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolutionResultHandler' via factory method to bean named 'webFluxAdapterRegistry'
+2022-09-14 14:59:48.898 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'viewResolutionResultHandler' via factory method to bean named 'webFluxContentTypeResolver'
+2022-09-14 14:59:48.900 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'serverResponseResultHandler'
+2022-09-14 14:59:48.900 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'serverResponseResultHandler' via factory method to bean named 'serverCodecConfigurer'
+2022-09-14 14:59:48.900 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'responseStatusExceptionHandler'
+2022-09-14 14:59:48.901 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration'
+2022-09-14 14:59:48.903 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration$AnnotationConfig'
+2022-09-14 14:59:48.903 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration$AnnotationConfig' via constructor to bean named 'org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@732f29af'
+2022-09-14 14:59:48.903 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'httpHandler'
+2022-09-14 14:59:48.908 DEBUG 3929 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2022-09-14 14:59:48.909 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration'
+2022-09-14 14:59:48.909 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration'
+2022-09-14 14:59:48.909 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' via constructor to bean named 'environment'
+2022-09-14 14:59:48.909 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mbeanExporter'
+2022-09-14 14:59:48.910 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'objectNamingStrategy'
+2022-09-14 14:59:48.911 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mbeanExporter' via factory method to bean named 'objectNamingStrategy'
+2022-09-14 14:59:48.911 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'mbeanExporter' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@47dbb1e2'
+2022-09-14 14:59:48.915 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'mbeanServer'
+2022-09-14 14:59:48.921 DEBUG 3929 --- [           main] o.springframework.jmx.support.JmxUtils   : Found MBeanServer: com.sun.jmx.mbeanserver.JmxMBeanServer@5fdef03a
+2022-09-14 14:59:48.924 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration'
+2022-09-14 14:59:48.925 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'springApplicationAdminRegistrar'
+2022-09-14 14:59:48.925 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'springApplicationAdminRegistrar' via factory method to bean named 'environment'
+2022-09-14 14:59:48.928 DEBUG 3929 --- [           main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2022-09-14 14:59:48.928 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration'
+2022-09-14 14:59:48.929 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration'
+2022-09-14 14:59:48.929 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration'
+2022-09-14 14:59:48.929 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'applicationAvailability'
+2022-09-14 14:59:48.931 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration'
+2022-09-14 14:59:48.931 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration'
+2022-09-14 14:59:48.931 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'lifecycleProcessor'
+2022-09-14 14:59:48.932 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2022-09-14 14:59:48.932 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'lifecycleProcessor' via factory method to bean named 'spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties'
+2022-09-14 14:59:48.933 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration'
+2022-09-14 14:59:48.935 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2022-09-14 14:59:48.936 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration' via constructor to bean named 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties'
+2022-09-14 14:59:48.936 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.netty.NettyAutoConfiguration'
+2022-09-14 14:59:48.936 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.netty-org.springframework.boot.autoconfigure.netty.NettyProperties'
+2022-09-14 14:59:48.937 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'org.springframework.boot.autoconfigure.netty.NettyAutoConfiguration' via constructor to bean named 'spring.netty-org.springframework.boot.autoconfigure.netty.NettyProperties'
+2022-09-14 14:59:48.937 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration'
+2022-09-14 14:59:48.938 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties'
+2022-09-14 14:59:48.939 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+2022-09-14 14:59:48.939 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'taskExecutorBuilder'
+2022-09-14 14:59:48.940 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2022-09-14 14:59:48.941 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'taskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+2022-09-14 14:59:48.942 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration'
+2022-09-14 14:59:48.943 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'scheduledBeanLazyInitializationExcludeFilter'
+2022-09-14 14:59:48.944 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'taskSchedulerBuilder'
+2022-09-14 14:59:48.944 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2022-09-14 14:59:48.945 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'taskSchedulerBuilder' via factory method to bean named 'spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties'
+2022-09-14 14:59:48.946 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration'
+2022-09-14 14:59:48.946 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorConfiguration$ReactorNetty'
+2022-09-14 14:59:48.946 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration'
+2022-09-14 14:59:48.946 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration$WebClientCodecsConfiguration'
+2022-09-14 14:59:48.946 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'exchangeStrategiesCustomizer'
+2022-09-14 14:59:48.947 DEBUG 3929 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration'
+2022-09-14 14:59:48.952 DEBUG 3929 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2022-09-14 14:59:48.952 DEBUG 3929 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Autodetecting user-defined JMX MBeans
+2022-09-14 14:59:48.957 DEBUG 3929 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483646
+2022-09-14 14:59:48.966 DEBUG 3929 --- [           main] r.netty.resources.DefaultLoopIOUring     : Default io_uring support : false
+2022-09-14 14:59:48.977 DEBUG 3929 --- [           main] r.netty.resources.DefaultLoopEpoll       : Default Epoll support : false
+2022-09-14 14:59:48.978 DEBUG 3929 --- [           main] r.netty.resources.DefaultLoopKQueue      : Default KQueue support : false
+2022-09-14 14:59:48.983 DEBUG 3929 --- [           main] i.n.channel.MultithreadEventLoopGroup    : -Dio.netty.eventLoopThreads: 24
+2022-09-14 14:59:48.990 DEBUG 3929 --- [           main] io.netty.channel.nio.NioEventLoop        : -Dio.netty.noKeySetOptimization: false
+2022-09-14 14:59:48.990 DEBUG 3929 --- [           main] io.netty.channel.nio.NioEventLoop        : -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-09-14 14:59:48.991 DEBUG 3929 --- [           main] i.netty.util.internal.PlatformDependent  : org.jctools-core.MpscChunkedArrayQueue: available
+2022-09-14 14:59:49.020 DEBUG 3929 --- [           main] io.netty.channel.DefaultChannelId        : -Dio.netty.processId: 3929 (auto-detected)
+2022-09-14 14:59:49.023 DEBUG 3929 --- [           main] io.netty.util.NetUtil                    : -Djava.net.preferIPv4Stack: false
+2022-09-14 14:59:49.023 DEBUG 3929 --- [           main] io.netty.util.NetUtil                    : -Djava.net.preferIPv6Addresses: false
+2022-09-14 14:59:49.026 DEBUG 3929 --- [           main] io.netty.util.NetUtilInitializations     : Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+2022-09-14 14:59:49.026 DEBUG 3929 --- [           main] io.netty.util.NetUtil                    : Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+2022-09-14 14:59:49.031 DEBUG 3929 --- [           main] io.netty.channel.DefaultChannelId        : -Dio.netty.machineId: ac:de:48:ff:fe:00:11:22 (auto-detected)
+2022-09-14 14:59:49.054 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.numHeapArenas: 24
+2022-09-14 14:59:49.054 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.numDirectArenas: 24
+2022-09-14 14:59:49.054 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.pageSize: 8192
+2022-09-14 14:59:49.054 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.maxOrder: 11
+2022-09-14 14:59:49.054 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.chunkSize: 16777216
+2022-09-14 14:59:49.054 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.smallCacheSize: 256
+2022-09-14 14:59:49.055 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.normalCacheSize: 64
+2022-09-14 14:59:49.055 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-09-14 14:59:49.055 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-09-14 14:59:49.055 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-09-14 14:59:49.055 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.useCacheForAllThreads: true
+2022-09-14 14:59:49.055 DEBUG 3929 --- [           main] io.netty.buffer.PooledByteBufAllocator   : -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-09-14 14:59:49.071 DEBUG 3929 --- [           main] io.netty.buffer.ByteBufUtil              : -Dio.netty.allocator.type: pooled
+2022-09-14 14:59:49.072 DEBUG 3929 --- [           main] io.netty.buffer.ByteBufUtil              : -Dio.netty.threadLocalDirectBufferSize: 0
+2022-09-14 14:59:49.072 DEBUG 3929 --- [           main] io.netty.buffer.ByteBufUtil              : -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-09-14 14:59:49.101 DEBUG 3929 --- [ctor-http-nio-1] reactor.netty.transport.ServerTransport  : [id:4c64f746, L:/[0:0:0:0:0:0:0:0]:8084] Bound new server
+2022-09-14 14:59:49.103  INFO 3929 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8084
+2022-09-14 14:59:49.106 DEBUG 3929 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerStartStop'
+2022-09-14 14:59:49.106 DEBUG 3929 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2022-09-14 14:59:49.106 DEBUG 3929 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'webServerGracefulShutdown'
+2022-09-14 14:59:49.136 DEBUG 3929 --- [           main] ConditionEvaluationReportLoggingListener :
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+   AopAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.aop.auto=true) matched (OnPropertyCondition)
+
+   AopAutoConfiguration.ClassProxyingConfiguration matched:
+      - @ConditionalOnMissingClass did not find unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
+      - @ConditionalOnProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
+
+   ClientHttpConnectorAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   ClientHttpConnectorAutoConfiguration#clientConnectorCustomizer matched:
+      - @ConditionalOnBean (types: org.springframework.http.client.reactive.ClientHttpConnector; SearchStrategy: all) found bean 'reactorClientHttpConnector' (OnBeanCondition)
+
+   ClientHttpConnectorConfiguration.ReactorNetty matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.client.HttpClient' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.http.client.reactive.ClientHttpConnector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   CodecsAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.http.codec.CodecConfigurer', 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   CodecsAutoConfiguration.JacksonCodecConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   CodecsAutoConfiguration.JacksonCodecConfiguration#jacksonCodecCustomizer matched:
+      - @ConditionalOnBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) found bean 'jacksonObjectMapper' (OnBeanCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration matched:
+      - @ConditionalOnWebApplication (required) found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.NettyWebServerFactoryCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
+
+   ErrorWebFluxAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   ErrorWebFluxAutoConfiguration#errorAttributes matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.reactive.error.ErrorAttributes; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ErrorWebFluxAutoConfiguration#errorWebExceptionHandler matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   GenericCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheCondition)
+
+   HttpHandlerAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'org.springframework.web.reactive.DispatcherHandler', 'org.springframework.http.server.reactive.HttpHandler' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.http.server.reactive.HttpHandler; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
+
+   JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration#jacksonObjectMapperBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.converter.json.Jackson2ObjectMapperBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
+
+   JacksonAutoConfiguration.JacksonObjectMapperConfiguration#jacksonObjectMapper matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.databind.ObjectMapper; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration matched:
+      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
+
+   JacksonAutoConfiguration.ParameterNamesModuleConfiguration#parameterNamesModule matched:
+      - @ConditionalOnMissingBean (types: com.fasterxml.jackson.module.paramnames.ParameterNamesModule; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JmxAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
+      - @ConditionalOnProperty (spring.jmx.enabled=true) matched (OnPropertyCondition)
+
+   JmxAutoConfiguration#mbeanExporter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.jmx.export.MBeanExporter; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   JmxAutoConfiguration#mbeanServer matched:
+      - @ConditionalOnMissingBean (types: javax.management.MBeanServer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   JmxAutoConfiguration#objectNamingStrategy matched:
+      - @ConditionalOnMissingBean (types: org.springframework.jmx.export.naming.ObjectNamingStrategy; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   LifecycleAutoConfiguration#defaultLifecycleProcessor matched:
+      - @ConditionalOnMissingBean (names: lifecycleProcessor; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   NettyAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'io.netty.util.NettyRuntime' (OnClassCondition)
+
+   NoOpCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.NoOpCacheConfiguration automatic cache type (CacheCondition)
+
+   PropertyPlaceholderAutoConfiguration#propertySourcesPlaceholderConfigurer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.context.support.PropertySourcesPlaceholderConfigurer; SearchStrategy: current) did not find any beans (OnBeanCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.http.ReactiveHttpInputMessage' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedNetty matched:
+      - @ConditionalOnClass found required class 'reactor.netty.http.server.HttpServer' (OnClassCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.web.reactive.server.ReactiveWebServerFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedNetty#reactorServerResourceFactory matched:
+      - @ConditionalOnMissingBean (types: org.springframework.http.client.reactive.ReactorResourceFactory; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SimpleCacheConfiguration matched:
+      - Cache org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration automatic cache type (CacheCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.application.admin.enabled=true) matched (OnPropertyCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration#springApplicationAdminRegistrar matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SqlInitializationAutoConfiguration matched:
+      - @ConditionalOnProperty (spring.sql.init.enabled) matched (OnPropertyCondition)
+      - NoneNestedConditions 0 matched 1 did not; NestedCondition on SqlInitializationAutoConfiguration.SqlInitializationModeCondition.ModeIsNever @ConditionalOnProperty (spring.sql.init.mode=never) did not find property 'mode' (SqlInitializationAutoConfiguration.SqlInitializationModeCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
+
+   TaskExecutionAutoConfiguration#applicationTaskExecutor matched:
+      - @ConditionalOnMissingBean (types: java.util.concurrent.Executor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskExecutionAutoConfiguration#taskExecutorBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskExecutorBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TaskSchedulingAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
+
+   TaskSchedulingAutoConfiguration#taskSchedulerBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.task.TaskSchedulerBuilder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebClientAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   WebClientAutoConfiguration#webClientBuilder matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.reactive.function.client.WebClient$Builder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebClientAutoConfiguration.WebClientCodecsConfiguration matched:
+      - @ConditionalOnBean (types: org.springframework.boot.web.codec.CodecCustomizer; SearchStrategy: all) found beans 'jacksonCodecCustomizer', 'defaultCodecCustomizer' (OnBeanCondition)
+
+   WebClientAutoConfiguration.WebClientCodecsConfiguration#exchangeStrategiesCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientCodecCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebFluxAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+      - found ConfigurableReactiveWebEnvironment (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.reactive.config.WebFluxConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebFluxAutoConfiguration.EnableWebFluxConfiguration#localeContextResolver matched:
+      - @ConditionalOnMissingBean (names: localeContextResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebFluxAutoConfiguration.EnableWebFluxConfiguration#webSessionManager matched:
+      - @ConditionalOnMissingBean (names: webSessionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   ActiveMQAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.jms.ConnectionFactory' (OnClassCondition)
+
+   AopAutoConfiguration.AspectJAutoProxyingConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.aspectj.weaver.Advice' (OnClassCondition)
+
+   ArtemisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.jms.ConnectionFactory' (OnClassCondition)
+
+   BatchAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.batch.core.launch.JobLauncher' (OnClassCondition)
+
+   CacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.cache.interceptor.CacheAspectSupport; SearchStrategy: all) did not find any beans of type org.springframework.cache.interceptor.CacheAspectSupport (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
+
+   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnPostProcessor:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
+         - Ancestor org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
+
+   CaffeineCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
+
+   CassandraAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   CassandraReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.cassandra.ReactiveSession' (OnClassCondition)
+
+   CassandraRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.datastax.oss.driver.api.core.CqlSession' (OnClassCondition)
+
+   ClientHttpConnectorConfiguration.HttpClient5:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.apache.hc.client5.http.impl.async.HttpAsyncClients', 'org.apache.hc.core5.http.nio.AsyncRequestProducer' (OnClassCondition)
+
+   ClientHttpConnectorConfiguration.JettyClient:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.eclipse.jetty.reactive.client.ReactiveRequest' (OnClassCondition)
+
+   ClientHttpConnectorConfiguration.ReactorNetty#reactorClientResourceFactory:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.http.client.reactive.ReactorResourceFactory; SearchStrategy: all) found beans of type 'org.springframework.http.client.reactive.ReactorResourceFactory' reactorServerResourceFactory (OnBeanCondition)
+
+   CouchbaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+
+   CouchbaseReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
+
+   CouchbaseRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Bucket' (OnClassCondition)
+
+   DataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   DataSourceInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
+
+   DataSourceTransactionManagerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   DispatcherServletAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
+
+   EhCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'net.sf.ehcache.Cache' (OnClassCondition)
+
+   ElasticsearchDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate' (OnClassCondition)
+
+   ElasticsearchRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.Client' (OnClassCondition)
+
+   ElasticsearchRestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.elasticsearch.client.RestHighLevelClient' (OnClassCondition)
+
+   EmbeddedLdapAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.unboundid.ldap.listener.InMemoryDirectoryServer' (OnClassCondition)
+
+   EmbeddedMongoAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.MongoClientSettings' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.JettyWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.util.Loader', 'org.eclipse.jetty.webapp.WebAppContext' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol' (OnClassCondition)
+
+   EmbeddedWebServerFactoryCustomizerAutoConfiguration.UndertowWebServerFactoryCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.undertow.Undertow', 'org.xnio.SslClientAuthMode' (OnClassCondition)
+
+   ErrorMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.Servlet' (OnClassCondition)
+
+   FlywayAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+
+   FreeMarkerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
+
+   GroovyTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'groovy.text.markup.MarkupTemplateEngine' (OnClassCondition)
+
+   GsonAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.google.gson.Gson' (OnClassCondition)
+
+   H2ConsoleAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.h2.server.web.WebServlet' (OnClassCondition)
+
+   HazelcastAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HazelcastCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HazelcastJpaDependencyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
+
+   HibernateJpaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.persistence.EntityManager' (OnClassCondition)
+
+   HttpEncodingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
+
+   HttpMessageConvertersAutoConfiguration:
+      Did not match:
+         - NoneNestedConditions 1 matched 0 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication found ConfigurableReactiveWebEnvironment (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
+
+   HypermediaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.hateoas.EntityModel' (OnClassCondition)
+
+   InfinispanCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
+
+   InfluxDbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.influxdb.InfluxDB' (OnClassCondition)
+
+   IntegrationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.integration.config.EnableIntegration' (OnClassCondition)
+
+   JCacheCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
+
+   JdbcRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration' (OnClassCondition)
+
+   JdbcTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
+
+   JerseyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.ServletRegistration' (OnClassCondition)
+
+   JmsAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.jms.Message' (OnClassCondition)
+
+   JndiConnectionFactoryAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jms.core.JmsTemplate' (OnClassCondition)
+
+   JndiDataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+   JooqAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.jooq.DSLContext' (OnClassCondition)
+
+   JpaRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
+
+   JsonbAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.json.bind.Jsonb' (OnClassCondition)
+
+   JtaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.transaction.Transaction' (OnClassCondition)
+
+   KafkaAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.kafka.core.KafkaTemplate' (OnClassCondition)
+
+   LdapAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ldap.core.ContextSource' (OnClassCondition)
+
+   LdapRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.ldap.repository.LdapRepository' (OnClassCondition)
+
+   LiquibaseAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'liquibase.change.DatabaseChange' (OnClassCondition)
+
+   MailSenderAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.activation.MimeType' (OnClassCondition)
+
+   MailSenderValidatorAutoConfiguration:
+      Did not match:
+         - @ConditionalOnSingleCandidate did not find required type 'org.springframework.mail.javamail.JavaMailSenderImpl' (OnBeanCondition)
+
+   MessageSourceAutoConfiguration:
+      Did not match:
+         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
+
+   MongoAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MongoDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.reactivestreams.client.MongoClient' (OnClassCondition)
+
+   MongoRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.mongodb.client.MongoClient' (OnClassCondition)
+
+   MultipartAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.MultipartConfigElement' (OnClassCondition)
+
+   MustacheAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.samskivert.mustache.Mustache' (OnClassCondition)
+
+   Neo4jAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jReactiveDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jReactiveRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   Neo4jRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.neo4j.driver.Driver' (OnClassCondition)
+
+   OAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   OAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken' (OnClassCondition)
+
+   PersistenceExceptionTranslationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
+
+   ProjectInfoAutoConfiguration#buildProperties:
+      Did not match:
+         - @ConditionalOnResource did not find resource '${spring.info.build.location:classpath:META-INF/build-info.properties}' (OnResourceCondition)
+
+   ProjectInfoAutoConfiguration#gitProperties:
+      Did not match:
+         - GitResource did not find git info at classpath:git.properties (ProjectInfoAutoConfiguration.GitResourceAvailableCondition)
+
+   QuartzAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.quartz.Scheduler' (OnClassCondition)
+
+   R2dbcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   R2dbcDataAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.r2dbc.core.R2dbcEntityTemplate' (OnClassCondition)
+
+   R2dbcInitializationConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'io.r2dbc.spi.ConnectionFactory', 'org.springframework.r2dbc.connection.init.DatabasePopulator' (OnClassCondition)
+
+   R2dbcRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
+
+   R2dbcTransactionManagerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.r2dbc.connection.R2dbcTransactionManager' (OnClassCondition)
+
+   RSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketRequesterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RSocketSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.rsocket.core.SecuritySocketAcceptorInterceptor' (OnClassCondition)
+
+   RSocketServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.core.RSocketServer' (OnClassCondition)
+
+   RSocketStrategiesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.rsocket.RSocket' (OnClassCondition)
+
+   RabbitAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.rabbitmq.client.Channel' (OnClassCondition)
+
+   ReactiveElasticsearchRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.reactive.ReactiveElasticsearchClient' (OnClassCondition)
+
+   ReactiveElasticsearchRestClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.elasticsearch.client.reactive.ReactiveRestClients' (OnClassCondition)
+
+   ReactiveOAuth2ClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveOAuth2ResourceServerAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveSecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity' (OnClassCondition)
+
+   ReactiveUserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration#forwardedHeaderTransformer:
+      Did not match:
+         - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
+
+   ReactiveWebServerFactoryAutoConfiguration#tomcatReactiveWebServerFactoryCustomizer:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedJetty:
+      Did not match:
+         - @ConditionalOnClass did not find required classes 'org.eclipse.jetty.server.Server', 'org.eclipse.jetty.servlet.ServletHolder' (OnClassCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedTomcat:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.catalina.startup.Tomcat' (OnClassCondition)
+
+   ReactiveWebServerFactoryConfiguration.EmbeddedUndertow:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.undertow.Undertow' (OnClassCondition)
+
+   RedisAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.core.RedisOperations' (OnClassCondition)
+
+   RedisCacheConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
+
+   RedisReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.ReactiveRedisConnectionFactory' (OnClassCondition)
+
+   RedisRepositoriesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.repository.configuration.EnableRedisRepositories' (OnClassCondition)
+
+   RepositoryRestMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' (OnClassCondition)
+
+   RestTemplateAutoConfiguration:
+      Did not match:
+         - NoneNestedConditions 1 matched 0 did not; NestedCondition on RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication found ConfigurableReactiveWebEnvironment (RestTemplateAutoConfiguration.NotReactiveWebApplicationCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.web.client.RestTemplate' (OnClassCondition)
+
+   Saml2RelyingPartyAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+
+   SecurityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
+
+   SecurityFilterAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
+
+   SendGridAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'com.sendgrid.SendGrid' (OnClassCondition)
+
+   ServletWebServerFactoryAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.ServletRequest' (OnClassCondition)
+
+   SessionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.session.Session' (OnClassCondition)
+
+   SolrAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.apache.solr.client.solrj.impl.CloudSolrClient' (OnClassCondition)
+
+   SpringDataWebAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.data.web.PageableHandlerMethodArgumentResolver' (OnClassCondition)
+
+   TaskSchedulingAutoConfiguration#taskScheduler:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring5.SpringTemplateEngine' (OnClassCondition)
+
+   TransactionAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   ValidationAutoConfiguration:
+      Did not match:
+         - @ConditionalOnResource did not find resource 'classpath:META-INF/services/javax.validation.spi.ValidationProvider' (OnResourceCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'javax.validation.executable.ExecutableValidator' (OnClassCondition)
+
+   WebFluxAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.webflux.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebFluxAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarAssetLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.Servlet' (OnClassCondition)
+
+   WebServiceTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
+
+   WebServicesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServlet' (OnClassCondition)
+
+   WebSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer' (OnClassCondition)
+
+   WebSocketReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.Servlet' (OnClassCondition)
+
+   WebSocketServletAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.servlet.Servlet' (OnClassCondition)
+
+   XADataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'javax.transaction.TransactionManager' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2022-09-14 14:59:49.138 DEBUG 3929 --- [           main] ySourcesPropertyResolver$DefaultResolver : Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+2022-09-14 14:59:49.141  INFO 3929 --- [           main] i.g.c.tutorials.sampleapp.Application    : Started Application in 1.793 seconds (JVM running for 4.426)
+2022-09-14 14:59:49.142 DEBUG 3929 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2022-09-14 14:59:49.144 DEBUG 3929 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2022-09-14 14:59:49.155 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 82
+2022-09-14 14:59:49.155 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.156 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 82
+2022-09-14 14:59:49.157 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.157 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.157 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.157 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.157 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.158 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.158 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.158 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 84
+2022-09-14 14:59:49.159 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.159 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.159 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(1)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.159 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  5, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2022-09-14 14:59:49.164 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.164 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@3b8adbc9: connectionId=rmi://192.168.0.100  5] closing.
+2022-09-14 14:59:49.164 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@3b8adbc9: connectionId=rmi://192.168.0.100  5] closed.
+2022-09-14 14:59:49.168 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: accepted socket from [192.168.0.100:61736]
+2022-09-14 14:59:49.168 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: accepted socket from [192.168.0.100:61737]
+2022-09-14 14:59:49.169 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.169 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.169 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.169 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.170 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.171 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 84
+2022-09-14 14:59:49.171 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 84
+2022-09-14 14:59:49.172 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "java.rmi.MarshalledObject", codebase = ""
+2022-09-14 14:59:49.173 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.MarshalledObject", codebase = ""
+2022-09-14 14:59:49.174 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "[B", codebase = ""
+2022-09-14 14:59:49.174 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  7 unwrapping query with defaultClassLoader.
+2022-09-14 14:59:49.174 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "[Ljava.lang.String;", codebase = ""
+2022-09-14 14:59:49.174 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  6 unwrapping params with MBean extended ClassLoader.
+2022-09-14 14:59:49.174 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  7, name=:application=*, query=java.rmi.MarshalledObject@d
+2022-09-14 14:59:49.175 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(3)-192.168.0.100: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.177 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.177 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.178 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  7, name=DefaultDomain:application=, attribute=SnapshotAsJson
+2022-09-14 14:59:49.179 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  6, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2022-09-14 14:59:49.180 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.180 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@21638449: connectionId=rmi://192.168.0.100  6] closing.
+2022-09-14 14:59:49.180 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@21638449: connectionId=rmi://192.168.0.100  6] closed.
+2022-09-14 14:59:49.181 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.181 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@4437428d: connectionId=rmi://192.168.0.100  7] closing.
+2022-09-14 14:59:49.181 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.182 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@4437428d: connectionId=rmi://192.168.0.100  7] closed.
+2022-09-14 14:59:49.183 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.183 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.184 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.184 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.184 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.184 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.184 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.185 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 84
+2022-09-14 14:59:49.185 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.185 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.MarshalledObject", codebase = ""
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[B", codebase = ""
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = ""
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8 unwrapping params with MBean extended ClassLoader.
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.186 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2022-09-14 14:59:49.187 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.187 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.187 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.MarshalledObject", codebase = ""
+2022-09-14 14:59:49.187 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[B", codebase = ""
+2022-09-14 14:59:49.188 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = ""
+2022-09-14 14:59:49.188 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8 unwrapping params with MBean extended ClassLoader.
+2022-09-14 14:59:49.188 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.188 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2022-09-14 14:59:49.190 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.190 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.190 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.MarshalledObject", codebase = ""
+2022-09-14 14:59:49.191 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[B", codebase = ""
+2022-09-14 14:59:49.191 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = ""
+2022-09-14 14:59:49.191 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8 unwrapping params with MBean extended ClassLoader.
+2022-09-14 14:59:49.191 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.191 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "javax.management.ObjectName", codebase = ""
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "java.rmi.MarshalledObject", codebase = ""
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[B", codebase = ""
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = ""
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8 unwrapping params with MBean extended ClassLoader.
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(2)-192.168.0.100: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 14:59:49.192 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : connectionId=rmi://192.168.0.100  8, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2022-09-14 14:59:49.193 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) op = 80
+2022-09-14 14:59:49.193 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@6be4bc74: connectionId=rmi://192.168.0.100  8] closing.
+2022-09-14 14:59:49.193 DEBUG 3929 --- [)-192.168.0.100] javax.management.remote.rmi              : [javax.management.remote.rmi.RMIConnectionImpl@6be4bc74: connectionId=rmi://192.168.0.100  8] closed.
+2022-09-14 15:00:07.141 DEBUG 3929 --- [ctor-http-nio-3] io.netty.buffer.AbstractByteBuf          : -Dio.netty.buffer.checkAccessible: true
+2022-09-14 15:00:07.141 DEBUG 3929 --- [ctor-http-nio-3] io.netty.buffer.AbstractByteBuf          : -Dio.netty.buffer.checkBounds: true
+2022-09-14 15:00:07.142 DEBUG 3929 --- [ctor-http-nio-3] i.n.util.ResourceLeakDetectorFactory     : Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@49709e50
+2022-09-14 15:00:07.171 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] New http connection, requesting read
+2022-09-14 15:00:07.171 DEBUG 3929 --- [ctor-http-nio-2] r.n.http.server.HttpServerOperations     : [id:e8eb9cc7, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61863] New http connection, requesting read
+2022-09-14 15:00:07.172 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.transport.TransportConfig  : [id:d8554946, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpServerCodec), (reactor.left.httpTrafficHandler = reactor.netty.http.server.HttpTrafficHandler), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2022-09-14 15:00:07.172 DEBUG 3929 --- [ctor-http-nio-2] reactor.netty.transport.TransportConfig  : [id:e8eb9cc7, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61863] Initialized pipeline DefaultChannelPipeline{(reactor.left.httpCodec = io.netty.handler.codec.http.HttpServerCodec), (reactor.left.httpTrafficHandler = reactor.netty.http.server.HttpTrafficHandler), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+2022-09-14 15:00:07.182 DEBUG 3929 --- [ctor-http-nio-2] io.netty.util.Recycler                   : -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-09-14 15:00:07.183 DEBUG 3929 --- [ctor-http-nio-2] io.netty.util.Recycler                   : -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-09-14 15:00:07.183 DEBUG 3929 --- [ctor-http-nio-2] io.netty.util.Recycler                   : -Dio.netty.recycler.linkCapacity: 16
+2022-09-14 15:00:07.183 DEBUG 3929 --- [ctor-http-nio-2] io.netty.util.Recycler                   : -Dio.netty.recycler.ratio: 8
+2022-09-14 15:00:07.183 DEBUG 3929 --- [ctor-http-nio-2] io.netty.util.Recycler                   : -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-09-14 15:00:07.222 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Increasing pending responses, now 1
+2022-09-14 15:00:07.229 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.http.server.HttpServer     : [id:d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@7eba1af4
+2022-09-14 15:00:07.246 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] HTTP POST "/users"
+2022-09-14 15:00:07.322 DEBUG 3929 --- [ctor-http-nio-3] s.w.r.r.m.a.RequestMappingHandlerMapping : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Mapped to io.github.cosminseceleanu.tutorials.sampleapp.user.controller.UserController#create(UserRepresentation)
+2022-09-14 15:00:07.348 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Content-Type:application/json
+2022-09-14 15:00:07.407 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:00:07.431 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.channel.FluxReceive        : [id:d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] FluxReceive{pending=0, cancelled=false, inboundDone=false, inboundError=null}: subscribing inbound receiver
+2022-09-14 15:00:07.466 DEBUG 3929 --- [ctor-http-nio-3] o.s.http.codec.json.Jackson2JsonDecoder  : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decoded [UserRepresentation(id=null, name=221, email=e21324e1@gmail.com)]
+2022-09-14 15:00:07.518 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Using 'application/json' given [*/*] and supported [application/json, application/*+json, application/x-ndjson, text/event-stream]
+2022-09-14 15:00:07.518 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:00:13.693 DEBUG 3929 --- [     parallel-1] o.s.http.codec.json.Jackson2JsonEncoder  : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Encoding [UserRepresentation(id=88783bae-4acd-4f1a-90e1-0721e56263d1, name=221, email=e21324e1@gmail.com)]
+2022-09-14 15:00:13.715  INFO 3929 --- [     parallel-1] i.g.c.t.s.u.controller.UserController    : log by user code: saved the user:onComplete
+2022-09-14 15:00:13.719 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decreasing pending responses, now 0
+2022-09-14 15:00:13.723 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Completed 201 CREATED
+2022-09-14 15:00:13.725 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP response frame
+2022-09-14 15:00:13.733 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-1, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP packet was sent, terminating the channel
+2022-09-14 15:00:13.736 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@312a2faf9 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:00:17.084 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: (port 61693) connection closed
+2022-09-14 15:00:17.084 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: (port 61693) connection closed
+2022-09-14 15:00:17.084 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: close connection, socket: Socket[addr=/192.168.0.100,port=61737,localport=61693]
+2022-09-14 15:00:17.084 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: close connection, socket: Socket[addr=/192.168.0.100,port=61736,localport=61693]
+2022-09-14 15:00:17.085 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: (port 61693) connection closed
+2022-09-14 15:00:17.085 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(2)-192.168.0.100: socket close: Socket[addr=/192.168.0.100,port=61736,localport=61693]
+2022-09-14 15:00:17.085 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(3)-192.168.0.100: socket close: Socket[addr=/192.168.0.100,port=61737,localport=61693]
+2022-09-14 15:00:17.085 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: close connection, socket: Socket[addr=/192.168.0.100,port=61718,localport=61693]
+2022-09-14 15:00:17.085 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(1)-192.168.0.100: socket close: Socket[addr=/192.168.0.100,port=61718,localport=61693]
+2022-09-14 15:00:18.887 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Increasing pending responses, now 1
+2022-09-14 15:00:18.887 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.http.server.HttpServer     : [id:d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@7eba1af4
+2022-09-14 15:00:18.888 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] HTTP POST "/users"
+2022-09-14 15:00:18.888 DEBUG 3929 --- [ctor-http-nio-3] s.w.r.r.m.a.RequestMappingHandlerMapping : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Mapped to io.github.cosminseceleanu.tutorials.sampleapp.user.controller.UserController#create(UserRepresentation)
+2022-09-14 15:00:18.888 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Content-Type:application/json
+2022-09-14 15:00:18.889 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:00:18.889 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.channel.FluxReceive        : [id:d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] FluxReceive{pending=0, cancelled=false, inboundDone=false, inboundError=null}: subscribing inbound receiver
+2022-09-14 15:00:18.890 DEBUG 3929 --- [ctor-http-nio-3] o.s.http.codec.json.Jackson2JsonDecoder  : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decoded [UserRepresentation(id=null, name=2wer21, email=eadf21324e1@gmail.com)]
+2022-09-14 15:00:18.891 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Using 'application/json' given [*/*] and supported [application/json, application/*+json, application/x-ndjson, text/event-stream]
+2022-09-14 15:00:18.891 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:00:19.896 DEBUG 3929 --- [     parallel-2] o.s.http.codec.json.Jackson2JsonEncoder  : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Encoding [UserRepresentation(id=fa4a4809-bda4-44c7-ab7c-fd7d3d68304b, name=2wer21, email=eadf21324e1@gmail.com (truncated)...]
+2022-09-14 15:00:19.912  INFO 3929 --- [     parallel-2] i.g.c.t.s.u.controller.UserController    : log by user code: saved the user:onComplete
+2022-09-14 15:00:19.912 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decreasing pending responses, now 0
+2022-09-14 15:00:19.914 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Completed 201 CREATED
+2022-09-14 15:00:19.915 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP response frame
+2022-09-14 15:00:19.915 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-2, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP packet was sent, terminating the channel
+2022-09-14 15:00:23.692 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Increasing pending responses, now 1
+2022-09-14 15:00:23.692 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.http.server.HttpServer     : [id:d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@7eba1af4
+2022-09-14 15:00:23.692 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] HTTP POST "/users"
+2022-09-14 15:00:23.693 DEBUG 3929 --- [ctor-http-nio-3] s.w.r.r.m.a.RequestMappingHandlerMapping : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Mapped to io.github.cosminseceleanu.tutorials.sampleapp.user.controller.UserController#create(UserRepresentation)
+2022-09-14 15:00:23.693 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Content-Type:application/json
+2022-09-14 15:00:23.693 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:00:23.693 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.channel.FluxReceive        : [id:d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] FluxReceive{pending=0, cancelled=false, inboundDone=false, inboundError=null}: subscribing inbound receiver
+2022-09-14 15:00:23.694 DEBUG 3929 --- [ctor-http-nio-3] o.s.http.codec.json.Jackson2JsonDecoder  : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decoded [UserRepresentation(id=null, name=2wer21, email=eadf21324e1@gmail.com)]
+2022-09-14 15:00:23.694 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Using 'application/json' given [*/*] and supported [application/json, application/*+json, application/x-ndjson, text/event-stream]
+2022-09-14 15:00:23.694 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:00:23.757 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@56164c154 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:00:23 GMT}{Content-Length: 0}
+2022-09-14 15:00:25.699 DEBUG 3929 --- [     parallel-3] o.s.http.codec.json.Jackson2JsonEncoder  : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Encoding [UserRepresentation(id=5d727f17-5b0d-4bfb-b47a-db82348e8d0b, name=2wer21, email=eadf21324e1@gmail.com (truncated)...]
+2022-09-14 15:00:25.711  INFO 3929 --- [     parallel-3] i.g.c.t.s.u.controller.UserController    : log by user code: saved the user:onComplete
+2022-09-14 15:00:25.711 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decreasing pending responses, now 0
+2022-09-14 15:00:25.712 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Completed 201 CREATED
+2022-09-14 15:00:25.712 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP response frame
+2022-09-14 15:00:25.713 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-3, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP packet was sent, terminating the channel
+2022-09-14 15:00:25.718 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@43c5eda09 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:00:35.735 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@27d767294 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:00:35 GMT}{Content-Length: 0}
+2022-09-14 15:00:47.043 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@561018679 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:00:57.058 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@60ae90ee4 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:00:57 GMT}{Content-Length: 0}
+2022-09-14 15:01:06.924 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Increasing pending responses, now 1
+2022-09-14 15:01:06.924 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.http.server.HttpServer     : [id:d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Handler is being applied: org.springframework.http.server.reactive.ReactorHttpHandlerAdapter@7eba1af4
+2022-09-14 15:01:06.925 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] HTTP POST "/users"
+2022-09-14 15:01:06.925 DEBUG 3929 --- [ctor-http-nio-3] s.w.r.r.m.a.RequestMappingHandlerMapping : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Mapped to io.github.cosminseceleanu.tutorials.sampleapp.user.controller.UserController#create(UserRepresentation)
+2022-09-14 15:01:06.925 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Content-Type:application/json
+2022-09-14 15:01:06.926 DEBUG 3929 --- [ctor-http-nio-3] .r.m.a.RequestBodyMethodArgumentResolver : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:01:06.926 DEBUG 3929 --- [ctor-http-nio-3] reactor.netty.channel.FluxReceive        : [id:d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] FluxReceive{pending=0, cancelled=false, inboundDone=false, inboundError=null}: subscribing inbound receiver
+2022-09-14 15:01:06.926 DEBUG 3929 --- [ctor-http-nio-3] o.s.http.codec.json.Jackson2JsonDecoder  : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decoded [UserRepresentation(id=null, name=2wer21, email=eadf21324e1@gmail.com)]
+2022-09-14 15:01:06.927 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Using 'application/json' given [*/*] and supported [application/json, application/*+json, application/x-ndjson, text/event-stream]
+2022-09-14 15:01:06.927 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.r.r.m.a.ResponseBodyResultHandler  : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] 0..1 [io.github.cosminseceleanu.tutorials.sampleapp.user.representation.UserRepresentation]
+2022-09-14 15:01:08.930 DEBUG 3929 --- [     parallel-4] o.s.http.codec.json.Jackson2JsonEncoder  : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Encoding [UserRepresentation(id=d7301477-b9b1-4119-ad6a-523709d7876a, name=2wer21, email=eadf21324e1@gmail.com (truncated)...]
+2022-09-14 15:01:08.941  INFO 3929 --- [     parallel-4] i.g.c.t.s.u.controller.UserController    : log by user code: saved the user:onComplete
+2022-09-14 15:01:08.942 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Decreasing pending responses, now 0
+2022-09-14 15:01:08.942 DEBUG 3929 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Completed 201 CREATED
+2022-09-14 15:01:08.942 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP response frame
+2022-09-14 15:01:08.942 DEBUG 3929 --- [ctor-http-nio-3] r.n.http.server.HttpServerOperations     : [id:d8554946-4, L:/[0:0:0:0:0:0:0:1]:8084 - R:/[0:0:0:0:0:0:0:1]:61864] Last HTTP packet was sent, terminating the channel
+2022-09-14 15:01:08.945 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@ceac9b69 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:01:16.703 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-192.168.0.100: accepted socket from [192.168.0.100:62388]
+2022-09-14 15:01:16.704 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-192.168.0.100: (port 61693) op = 80
+2022-09-14 15:01:16.704 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(4)-192.168.0.100: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 15:01:16.704 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(4)-192.168.0.100: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 15:01:16.704 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(4)-192.168.0.100: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 15:01:16.704 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(4)-192.168.0.100: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 15:01:16.704 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.loader                           : RMI TCP Connection(4)-192.168.0.100: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@26473bac
+2022-09-14 15:01:18.954 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@1018092d4 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:01:18 GMT}{Content-Length: 0}
+2022-09-14 15:01:31.710 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-192.168.0.100: (port 61693) connection closed
+2022-09-14 15:01:31.710 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-192.168.0.100: close connection, socket: Socket[addr=/192.168.0.100,port=62388,localport=61693]
+2022-09-14 15:01:31.710 DEBUG 3929 --- [)-192.168.0.100] sun.rmi.transport.tcp                    : RMI TCP Connection(4)-192.168.0.100: socket close: Socket[addr=/192.168.0.100,port=62388,localport=61693]
+2022-09-14 15:01:47.040 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@469df8699 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:01:57.056 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@522039b44 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:01:57 GMT}{Content-Length: 0}
+2022-09-14 15:02:17.038 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@8ddfd3f9 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:02:27.048 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@585cdc684 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:02:27 GMT}{Content-Length: 0}
+2022-09-14 15:02:47.044 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@71ab39ba9 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:02:57.054 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@229553a24 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:02:57 GMT}{Content-Length: 0}
+2022-09-14 15:03:17.037 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@45c666ca9 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:03:27.050 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@7bc74d864 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:03:27 GMT}{Content-Length: 0}
+2022-09-14 15:03:47.045 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@5309ddad9 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:03:57.057 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@5b899c2d4 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:03:57 GMT}{Content-Length: 0}
+2022-09-14 15:04:17.045 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@2d0f41a09 pairs: {POST /intake/v2/events HTTP/1.1: null}{User-Agent: apm-agent-java/1.33.0 (Application)}{Content-Type: application/x-ndjson}{Cache-Control: no-cache}{Pragma: no-cache}{Host: localhost:8200}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}{Transfer-Encoding: chunked}
+2022-09-14 15:04:27.054 DEBUG 3929 --- [server-reporter] s.n.www.protocol.http.HttpURLConnection  : sun.net.www.MessageHeader@6c6582fa4 pairs: {null: HTTP/1.1 202 Accepted}{X-Content-Type-Options: nosniff}{Date: Wed, 14 Sep 2022 07:04:27 GMT}{Content-Length: 0}
