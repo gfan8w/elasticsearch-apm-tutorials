@@ -2,6 +2,7 @@ package io.github.cosminseceleanu.tutorials.sampleapp.user.tasks;
 
 import co.elastic.apm.api.CaptureSpan;
 import co.elastic.apm.api.CaptureTransaction;
+import io.github.cosminseceleanu.tutorials.sampleapp.user.client.Weather;
 import io.github.cosminseceleanu.tutorials.sampleapp.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 @Service
@@ -19,6 +21,9 @@ import java.util.Random;
 public class PrintUsersTask {
 
     private UserService userService;
+
+    @Autowired
+    private Weather weather;
 
     @Autowired
     public PrintUsersTask(UserService userRepository) {
@@ -33,10 +38,14 @@ public class PrintUsersTask {
 
     @CaptureTransaction(type = "Task", value = "PrintWebFluxUsers")
     private void doExecute() {
-        Flux.range(1,3).flatMap(x->{
-            return userService.all()
-                    .flatMap(u-> this.check(u.getName()));
-        }).subscribe(item->log.info("user name:{}",item));
+        weather.getCityWeather().doOnNext(we->log.info("{}", Objects.toString(we)))
+                .then(weather.getCityWeatherOneByOne().doOnNext(w->log.info("{}", Objects.toString(w))))
+                .flatMapMany(we->{
+                    return Flux.fromIterable(we).flatMap(x->{
+                        return userService.all()
+                                .flatMap(u-> this.check(u.getName()));
+                    });
+                }).subscribe(item->log.info("user name:{}",item));
 
         sleep();
     }

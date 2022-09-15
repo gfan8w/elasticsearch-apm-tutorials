@@ -2,6 +2,7 @@ package com.cosmin.tutorials.apm.tasks;
 
 import co.elastic.apm.api.CaptureSpan;
 import co.elastic.apm.api.CaptureTransaction;
+import com.cosmin.tutorials.apm.database.User;
 import com.cosmin.tutorials.apm.database.UserRepository;
 import java.util.Random;
 import lombok.extern.slf4j.Slf4j;
@@ -28,7 +29,11 @@ public class PrintUsersTask {
 
     @CaptureTransaction(type = "Task", value = "PrintUsers")
     private void doExecute() {
-        userRepository.findAll().forEach(user -> log.debug(user.getEmail()));
+        var list =userRepository.findAll();
+        for (User user : list) {
+            convert(user);
+        }
+        list.forEach(user -> log.debug(user.getEmail()));
         sleep();
     }
 
@@ -42,5 +47,13 @@ public class PrintUsersTask {
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
+    }
+
+    @CaptureTransaction("convert")
+    private User convert(User user) {
+        user.setEmail(user.getEmail().toLowerCase());
+        user.setName(user.getName().toUpperCase());
+        sleep();
+        return user;
     }
 }
